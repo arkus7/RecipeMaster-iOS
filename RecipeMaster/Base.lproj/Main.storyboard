@@ -15,25 +15,39 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" placeholderIntrinsicWidth="200" placeholderIntrinsicHeight="200" image="mainScreenPizza" translatesAutoresizingMaskIntoConstraints="NO" id="g9v-lI-pSh" userLabel="Recipe Image">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.5" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" placeholderIntrinsicWidth="200" placeholderIntrinsicHeight="200" image="mainScreenPizza" translatesAutoresizingMaskIntoConstraints="NO" id="g9v-lI-pSh">
                                 <accessibility key="accessibilityConfiguration">
                                     <accessibilityTraits key="traits" image="YES" notEnabled="YES"/>
                                 </accessibility>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="U6L-eJ-umw"/>
+                                    <constraint firstAttribute="height" constant="200" id="hhL-TB-Kbx"/>
+                                </constraints>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="RecipeMaster" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BjW-L7-Tjn">
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="26"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="g9v-lI-pSh" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="kW5-yG-we9"/>
-                            <constraint firstItem="g9v-lI-pSh" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="tNB-ZF-Lb0"/>
+                            <constraint firstItem="g9v-lI-pSh" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="J9X-Ss-9zn"/>
+                            <constraint firstItem="g9v-lI-pSh" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="NZb-Kr-MR3"/>
+                            <constraint firstItem="BjW-L7-Tjn" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="T7k-Va-025"/>
+                            <constraint firstItem="BjW-L7-Tjn" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="d3Z-mD-zIy"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="pizzaImageView" destination="g9v-lI-pSh" id="2KO-c8-htH"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="135" y="138.75"/>
+            <point key="canvasLocation" x="135" y="138.38028169014083"/>
         </scene>
     </scenes>
     <resources>
