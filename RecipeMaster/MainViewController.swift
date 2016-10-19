@@ -9,9 +9,15 @@
 import UIKit
 
 class MainViewController: UIViewController {
+    
+    // MARK: Properties
+    @IBOutlet weak var pizzaImageView: UIImageView!
+
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        roundSquareImageView(imageView: pizzaImageView)
         // Do any additional setup after loading the view, typically from a nib.
     }
 
@@ -19,7 +25,13 @@ class MainViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
+    
+    func roundSquareImageView(imageView: UIImageView?) {
+        if let imageView = imageView {
+            imageView.layoutIfNeeded()
+            imageView.layer.cornerRadius = imageView.frame.height/2
+        }
+    }
 
 }
 
