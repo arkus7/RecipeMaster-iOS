@@ -77,12 +77,11 @@
 		211CD65A1DB774C0000CAE38 /* RecipeMaster */ = {
 			isa = PBXGroup;
 			children = (
-				211CD65B1DB774C0000CAE38 /* AppDelegate.swift */,
-				211CD65D1DB774C0000CAE38 /* ViewController.swift */,
-				211CD65F1DB774C0000CAE38 /* Main.storyboard */,
-				211CD6621DB774C0000CAE38 /* Assets.xcassets */,
-				211CD6641DB774C0000CAE38 /* LaunchScreen.storyboard */,
-				211CD6671DB774C0000CAE38 /* Info.plist */,
+				2140110E1DB77983001DD813 /* Supporting Files */,
+				2140110D1DB77978001DD813 /* Resources */,
+				2140110C1DB7796A001DD813 /* Models */,
+				2140110A1DB77930001DD813 /* Views */,
+				214011091DB77904001DD813 /* Controllers */,
 			);
 			path = RecipeMaster;
 			sourceTree = "<group>";
@@ -94,6 +93,55 @@
 				211CD6721DB774C1000CAE38 /* Info.plist */,
 			);
 			path = RecipeMasterTests;
+			sourceTree = "<group>";
+		};
+		214011091DB77904001DD813 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				211CD65B1DB774C0000CAE38 /* AppDelegate.swift */,
+				211CD65D1DB774C0000CAE38 /* ViewController.swift */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		2140110A1DB77930001DD813 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				2140110B1DB77939001DD813 /* Storyboards */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		2140110B1DB77939001DD813 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				211CD6641DB774C0000CAE38 /* LaunchScreen.storyboard */,
+				211CD65F1DB774C0000CAE38 /* Main.storyboard */,
+			);
+			name = Storyboards;
+			sourceTree = "<group>";
+		};
+		2140110C1DB7796A001DD813 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		2140110D1DB77978001DD813 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				211CD6621DB774C0000CAE38 /* Assets.xcassets */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		2140110E1DB77983001DD813 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				211CD6671DB774C0000CAE38 /* Info.plist */,
+			);
+			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -406,6 +454,7 @@
 				211CD6771DB774C1000CAE38 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		211CD6781DB774C1000CAE38 /* Build configuration list for PBXNativeTarget "RecipeMasterTests" */ = {
 			isa = XCConfigurationList;
@@ -414,6 +463,7 @@
 				211CD67A1DB774C1000CAE38 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
