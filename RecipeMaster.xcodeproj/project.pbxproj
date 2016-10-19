@@ -13,6 +13,7 @@
 		211CD6631DB774C0000CAE38 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 211CD6621DB774C0000CAE38 /* Assets.xcassets */; };
 		211CD6661DB774C0000CAE38 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 211CD6641DB774C0000CAE38 /* LaunchScreen.storyboard */; };
 		211CD6711DB774C1000CAE38 /* RecipeMasterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 211CD6701DB774C1000CAE38 /* RecipeMasterTests.swift */; };
+		21A50EDA1DB7A83B0034E826 /* PizzaRecipeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21A50ED91DB7A83B0034E826 /* PizzaRecipeViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +37,7 @@
 		211CD66C1DB774C1000CAE38 /* RecipeMasterTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RecipeMasterTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		211CD6701DB774C1000CAE38 /* RecipeMasterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeMasterTests.swift; sourceTree = "<group>"; };
 		211CD6721DB774C1000CAE38 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		21A50ED91DB7A83B0034E826 /* PizzaRecipeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PizzaRecipeViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +102,7 @@
 			children = (
 				211CD65B1DB774C0000CAE38 /* AppDelegate.swift */,
 				211CD65D1DB774C0000CAE38 /* MainViewController.swift */,
+				21A50ED91DB7A83B0034E826 /* PizzaRecipeViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -249,6 +252,7 @@
 			files = (
 				211CD65E1DB774C0000CAE38 /* MainViewController.swift in Sources */,
 				211CD65C1DB774C0000CAE38 /* AppDelegate.swift in Sources */,
+				21A50EDA1DB7A83B0034E826 /* PizzaRecipeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
