@@ -30,6 +30,7 @@ class MainViewController: UIViewController {
         if let imageView = imageView {
             imageView.layoutIfNeeded()
             imageView.layer.cornerRadius = imageView.frame.height/2
+            imageView.backgroundColor = UIColor.white
         }
     }
 
