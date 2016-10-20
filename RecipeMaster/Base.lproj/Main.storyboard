@@ -16,7 +16,7 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.5" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" placeholderIntrinsicWidth="200" placeholderIntrinsicHeight="200" image="mainScreenPizza" translatesAutoresizingMaskIntoConstraints="NO" id="g9v-lI-pSh">
@@ -70,66 +70,77 @@
                         <viewControllerLayoutGuide type="bottom" id="AGl-ri-9X5"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="JLX-C0-lza">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" placeholderIntrinsicWidth="374" placeholderIntrinsicHeight="276" axis="vertical" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="Ike-se-DWV">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gQY-P6-vKQ">
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pizza:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K2q-ZA-HAr" userLabel="Pizza Label">
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zez-82-mbZ" userLabel="Pizza Description">
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ingredients:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HcU-0D-nYU" userLabel="Ingredients Label">
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ingredients list" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ea3-vL-JAF" userLabel="Ingredients List">
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Preparing:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z4H-d9-lCx" userLabel="Preparing Label">
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Preparing list" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ovZ-6o-WM9" userLabel="Preparing List">
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Images:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nPZ-oO-bIN" userLabel="Images Label">
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="OlF-fT-qhk" userLabel="ImagesStackView"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="Ike-se-DWV">
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pizza:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K2q-ZA-HAr" userLabel="Pizza Label">
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zez-82-mbZ" userLabel="Pizza Description">
+                                                <attributedString key="attributedText">
+                                                    <fragment content="Description">
+                                                        <attributes>
+                                                            <font key="NSFont" metaFont="system" size="17"/>
+                                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                        </attributes>
+                                                    </fragment>
+                                                </attributedString>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ingredients:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HcU-0D-nYU" userLabel="Ingredients Label">
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="aCM-83-fjS" userLabel="Ingredients List"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Preparing:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z4H-d9-lCx" userLabel="Preparing Label">
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="aFa-Oe-B8Y" userLabel="Preparing List"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Images:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nPZ-oO-bIN" userLabel="Images Label">
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="ViL-x8-kkw" userLabel="Images List"/>
+                                        </subviews>
+                                    </stackView>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="ovZ-6o-WM9" firstAttribute="leading" secondItem="Ike-se-DWV" secondAttribute="leadingMargin" id="SQ0-OB-xUt"/>
-                                    <constraint firstItem="Ea3-vL-JAF" firstAttribute="leading" secondItem="Ike-se-DWV" secondAttribute="leadingMargin" id="amP-eT-EVS"/>
-                                    <constraint firstItem="Zez-82-mbZ" firstAttribute="leading" secondItem="Ike-se-DWV" secondAttribute="leading" id="eos-2t-qgN"/>
+                                    <constraint firstItem="Ike-se-DWV" firstAttribute="top" secondItem="gQY-P6-vKQ" secondAttribute="topMargin" id="18e-aL-eCp"/>
+                                    <constraint firstItem="Ike-se-DWV" firstAttribute="leading" secondItem="gQY-P6-vKQ" secondAttribute="leadingMargin" id="LLR-Or-5c6"/>
+                                    <constraint firstAttribute="bottomMargin" secondItem="Ike-se-DWV" secondAttribute="bottom" id="MQa-rE-wEd"/>
+                                    <constraint firstAttribute="trailingMargin" secondItem="Ike-se-DWV" secondAttribute="trailing" id="hPT-bt-3AB"/>
                                 </constraints>
-                            </stackView>
+                            </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="Ike-se-DWV" firstAttribute="top" secondItem="kaJ-71-ONR" secondAttribute="bottom" id="0zZ-L7-TJP"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="Ike-se-DWV" secondAttribute="trailing" id="FtD-SE-0Bn"/>
-                            <constraint firstItem="Ike-se-DWV" firstAttribute="leading" secondItem="JLX-C0-lza" secondAttribute="leadingMargin" id="NXX-st-e0n"/>
+                            <constraint firstItem="gQY-P6-vKQ" firstAttribute="leading" secondItem="JLX-C0-lza" secondAttribute="leading" id="40N-xu-OCm"/>
+                            <constraint firstAttribute="bottom" secondItem="gQY-P6-vKQ" secondAttribute="bottom" id="cwH-Gf-gbG"/>
+                            <constraint firstItem="gQY-P6-vKQ" firstAttribute="top" secondItem="JLX-C0-lza" secondAttribute="top" id="d7R-BL-Vf1"/>
+                            <constraint firstItem="K2q-ZA-HAr" firstAttribute="width" secondItem="JLX-C0-lza" secondAttribute="width" id="eIy-Sp-61u"/>
+                            <constraint firstAttribute="trailing" secondItem="gQY-P6-vKQ" secondAttribute="trailing" id="rjp-vT-6Od"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="descriptionLabel" destination="Zez-82-mbZ" id="luT-rk-U4c"/>
+                        <outlet property="imagesStackView" destination="ViL-x8-kkw" id="Ly6-3q-tNp"/>
+                        <outlet property="ingredientsStackView" destination="aCM-83-fjS" id="eCo-PB-0T7"/>
+                        <outlet property="preparingStackView" destination="aFa-Oe-B8Y" id="uay-WJ-jB9"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0af-xe-JC8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2002.8985507246377" y="136.95652173913044"/>
+            <point key="canvasLocation" x="2002.4000000000001" y="136.28185907046478"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="pLt-LU-veF">
