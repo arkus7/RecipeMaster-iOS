@@ -9,6 +9,7 @@ target 'RecipeMaster' do
 
   # Pods for RecipeMaster
   pod 'Alamofire', '~> 4.0'
+  pod 'SwiftyJSON'
 
   target 'RecipeMasterTests' do
     inherit! :search_paths
