@@ -10,13 +10,45 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "RecipeMaster/PizzaRecipeViewController.swift"
-            timestampString = "498639245.607128"
+            timestampString = "498653607.54403"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "35"
-            endingLineNumber = "35"
+            startingLineNumber = "44"
+            endingLineNumber = "44"
             landmarkName = "getRecipe()"
             landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "RecipeMaster.PizzaRecipeViewController.getRecipe () -&gt; ()"
+                  moduleName = "RecipeMaster"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/arkus/XcodeProjects/RecipeMaster/RecipeMaster/RecipeMaster/PizzaRecipeViewController.swift"
+                  timestampString = "498646123.286211"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "39"
+                  endingLineNumber = "39"
+                  offsetFromSymbolStart = "48">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "RecipeMaster.PizzaRecipeViewController.(getRecipe () -&gt; ()).(closure #1)"
+                  moduleName = "RecipeMaster"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/arkus/XcodeProjects/RecipeMaster/RecipeMaster/RecipeMaster/PizzaRecipeViewController.swift"
+                  timestampString = "498646123.289255"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "41"
+                  endingLineNumber = "41"
+                  offsetFromSymbolStart = "26">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -26,11 +58,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "RecipeMaster/PizzaRecipeViewController.swift"
-            timestampString = "498644308.178157"
+            timestampString = "498653607.54403"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "43"
-            endingLineNumber = "43">
+            startingLineNumber = "49"
+            endingLineNumber = "49"
+            landmarkName = "getRecipe()"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

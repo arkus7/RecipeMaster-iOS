@@ -9,6 +9,16 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>Kingfisher.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Nuke.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-RecipeMaster.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -27,7 +37,17 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>51A2240EBD0938FAF5D5F9388D83F9C5</key>
+		<key>0B31FF898A563784FF895647A00CD21A</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>1DE93A359FA21F91DFBE81309E851A4A</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>2B222C02EC4573FC45602452DDAC4F21</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -42,7 +62,7 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>E614F1AB99BA977E82FBF82EE730CC4F</key>
+		<key>7F70E1B7AAAB4917EDCD9023731C2413</key>
 		<dict>
 			<key>primary</key>
 			<true/>
