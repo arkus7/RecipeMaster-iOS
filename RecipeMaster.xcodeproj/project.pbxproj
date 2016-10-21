@@ -13,6 +13,8 @@
 		211CD6631DB774C0000CAE38 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 211CD6621DB774C0000CAE38 /* Assets.xcassets */; };
 		211CD6661DB774C0000CAE38 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 211CD6641DB774C0000CAE38 /* LaunchScreen.storyboard */; };
 		211CD6711DB774C1000CAE38 /* RecipeMasterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 211CD6701DB774C1000CAE38 /* RecipeMasterTests.swift */; };
+		2196046A1DBA1042003CDBA3 /* ApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 219604691DBA1041003CDBA3 /* ApiClient.swift */; };
+		2196046C1DBA11A7003CDBA3 /* Recipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2196046B1DBA11A7003CDBA3 /* Recipe.swift */; };
 		21A50EDA1DB7A83B0034E826 /* PizzaRecipeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21A50ED91DB7A83B0034E826 /* PizzaRecipeViewController.swift */; };
 		455B69CA1753F131F7A9797F /* Pods_RecipeMasterTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 468D10519A26C2E00617AD0F /* Pods_RecipeMasterTests.framework */; };
 		59F8F550027D4AC4BD4BE195 /* Pods_RecipeMaster.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2E5B17909C11D204DE1CD22 /* Pods_RecipeMaster.framework */; };
@@ -39,6 +41,8 @@
 		211CD66C1DB774C1000CAE38 /* RecipeMasterTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RecipeMasterTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		211CD6701DB774C1000CAE38 /* RecipeMasterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeMasterTests.swift; sourceTree = "<group>"; };
 		211CD6721DB774C1000CAE38 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		219604691DBA1041003CDBA3 /* ApiClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiClient.swift; sourceTree = "<group>"; };
+		2196046B1DBA11A7003CDBA3 /* Recipe.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Recipe.swift; sourceTree = "<group>"; };
 		21A50ED91DB7A83B0034E826 /* PizzaRecipeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PizzaRecipeViewController.swift; sourceTree = "<group>"; };
 		32F37D7620DEA59939776A98 /* Pods-RecipeMasterTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RecipeMasterTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RecipeMasterTests/Pods-RecipeMasterTests.debug.xcconfig"; sourceTree = "<group>"; };
 		468D10519A26C2E00617AD0F /* Pods_RecipeMasterTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RecipeMasterTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -91,6 +95,7 @@
 		211CD65A1DB774C0000CAE38 /* RecipeMaster */ = {
 			isa = PBXGroup;
 			children = (
+				219604681DBA102B003CDBA3 /* Backend */,
 				2140110E1DB77983001DD813 /* Supporting Files */,
 				2140110D1DB77978001DD813 /* Resources */,
 				2140110C1DB7796A001DD813 /* Models */,
@@ -139,6 +144,7 @@
 		2140110C1DB7796A001DD813 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				2196046B1DBA11A7003CDBA3 /* Recipe.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -157,6 +163,14 @@
 				211CD6671DB774C0000CAE38 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		219604681DBA102B003CDBA3 /* Backend */ = {
+			isa = PBXGroup;
+			children = (
+				219604691DBA1041003CDBA3 /* ApiClient.swift */,
+			);
+			name = Backend;
 			sourceTree = "<group>";
 		};
 		8CBE8E867A59F152373FFCC0 /* Frameworks */ = {
@@ -384,6 +398,8 @@
 				211CD65E1DB774C0000CAE38 /* MainViewController.swift in Sources */,
 				211CD65C1DB774C0000CAE38 /* AppDelegate.swift in Sources */,
 				21A50EDA1DB7A83B0034E826 /* PizzaRecipeViewController.swift in Sources */,
+				2196046A1DBA1042003CDBA3 /* ApiClient.swift in Sources */,
+				2196046C1DBA11A7003CDBA3 /* Recipe.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

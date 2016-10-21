@@ -40,39 +40,30 @@ class PizzaRecipeViewController: UIViewController {
     }
     
     func getRecipe() {
-        Alamofire.request("http://mooduplabs.com/test/info.php").responseJSON { response in
+        ApiClient.getRecipes(completionHandler: { recipe in
+            self.descriptionLabel.text = recipe.description
+            self.addStringListToStackView(to: self.ingredientsStackView, fromList: recipe.ingredients)
+            self.addStringListToStackView(to: self.preparingStackView, fromList: recipe.preparations)
+            self.addImagesListToStackView(to: self.imagesStackView, fromList: recipe.images)
             
-            switch response.result {
-            case .success(let value):
-                let json = JSON(value)
-                self.descriptionLabel.text = json["description"].stringValue
-                self.addStringListToStackView(to: self.ingredientsStackView, fromList: json["ingredients"].arrayValue)
-                self.addStringListToStackView(to: self.preparingStackView, fromList: json["preparing"].arrayValue)
-                self.addImagesListToStackView(to: self.imagesStackView, fromList: json["imgs"].arrayValue)
-                
-            case .failure(let error):
-                print(error)
-            }
-        }
+        })
     }
     
-    func addStringListToStackView(to: UIStackView, fromList: [JSON]) {
+    func addStringListToStackView(to: UIStackView, fromList: [String]) {
         for i in 0..<fromList.count {
             let label = UILabel(frame: CGRect(x: 0, y: 0, width: 100, height: 100))
-            label.text = fromList[i].stringValue
+            label.text = fromList[i]
             label.numberOfLines = 0
             to.addArrangedSubview(label)
         }
     }
     
-    func addImagesListToStackView(to: UIStackView, fromList: [JSON]) {
+    func addImagesListToStackView(to: UIStackView, fromList: [String]) {
         for i in 0..<fromList.count {
             let image = UIImageView()
-            image.sizeToFit()
-            Nuke.loadImage(with: URL(string: fromList[i].stringValue)!, into: image)
+            Nuke.loadImage(with: URL(string: fromList[i])!, into: image)
             image.clipsToBounds = true
             to.addArrangedSubview(image)
         }
-        to.sizeToFit()
     }
 }
