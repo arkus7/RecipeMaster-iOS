@@ -138,11 +138,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "RecipeMaster/MainViewController.swift"
-            timestampString = "498749461.469616"
+            timestampString = "498757206.903407"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "42"
-            endingLineNumber = "42"
+            startingLineNumber = "41"
+            endingLineNumber = "41"
             landmarkName = "loginToFacebook(_:)"
             landmarkType = "7">
          </BreakpointContent>

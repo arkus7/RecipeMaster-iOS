@@ -39,12 +39,29 @@ class MainViewController: UIViewController {
     
     @IBAction func loginToFacebook(_ sender: UIBarButtonItem) {
         FacebookHelper.sharedInstance().logIn(from: self, successBlock: { (profile) in
-            print(profile.toJSONString())
+            self.showToast(message: "Logged in as \(profile.firstName!) \(profile.lastName!)")
         }) { (error) in
                 if error != nil {
-                    print(error)
+                    self.showToast(message: "Couldn't log in to Facebook account: \(error?.localizedDescription)")
                 }
         }
+    }
+    
+    // MARK: Private
+    
+    func showToast(message: String) {
+        let toastLabel = UILabel(frame: CGRect(x: self.view.frame.size.width/2 - 150, y: self.view.frame.size.height-100, width: 300, height: 35))
+        toastLabel.backgroundColor = UIColor.black
+        toastLabel.textColor = UIColor.white
+        toastLabel.textAlignment = NSTextAlignment.center;
+        self.view.addSubview(toastLabel)
+        toastLabel.text = message
+        toastLabel.alpha = 1.0
+        toastLabel.layer.cornerRadius = 10;
+        toastLabel.clipsToBounds  =  true
+        UIView.animate(withDuration: 4.0, delay: 0.1, options: UIViewAnimationOptions.curveEaseOut, animations: {
+            toastLabel.alpha = 0.0
+        })
     }
 }
 
