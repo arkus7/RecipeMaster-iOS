@@ -40,7 +40,7 @@ class PizzaRecipeViewController: UIViewController {
     }
     
     func getRecipe() {
-        ApiClient.getRecipes(completionHandler: { recipe in
+        ApiClient.getRecipe(completionHandler: { recipe in
             self.descriptionLabel.text = recipe.description
             self.addStringListToStackView(to: self.ingredientsStackView, fromList: recipe.ingredients)
             self.addStringListToStackView(to: self.preparingStackView, fromList: recipe.preparations)
