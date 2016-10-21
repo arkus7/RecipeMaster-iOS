@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import FBSDKLoginKit
 
 class MainViewController: UIViewController {
     
@@ -22,6 +21,7 @@ class MainViewController: UIViewController {
         
         if FacebookHelper.sharedInstance().isLoggedIn() {
             showLoggedInMessage(profile: FacebookHelper.sharedInstance().currentProfile!)
+            self.navigationItem.leftBarButtonItem?.title = "Log out"
         }
     }
 
@@ -33,12 +33,18 @@ class MainViewController: UIViewController {
     // MARK: Actions
     
     @IBAction func loginToFacebook(_ sender: UIBarButtonItem) {
-        FacebookHelper.sharedInstance().logIn(from: self, successBlock: { (profile) in
-            self.showLoggedInMessage(profile: profile)
-        }) { (error) in
+        if !FacebookHelper.sharedInstance().isLoggedIn() {
+            FacebookHelper.sharedInstance().logIn(from: self, successBlock: { (profile) in
+                self.navigationItem.leftBarButtonItem?.title = "Log out"
+                self.showLoggedInMessage(profile: profile)
+            }) { (error) in
                 if error != nil {
                     self.showToast(message: "Couldn't log in to Facebook account: \(error?.localizedDescription)")
                 }
+            }
+        } else {
+            FacebookHelper.sharedInstance().logOut()
+            self.navigationItem.leftBarButtonItem?.title = "Login with Facebook"
         }
     }
     
