@@ -19,27 +19,22 @@ class MainViewController: UIViewController {
         super.viewDidLoad()
         
         roundSquareImageView(imageView: pizzaImageView)
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        if FacebookHelper.sharedInstance().isLoggedIn() {
+            showLoggedInMessage(profile: FacebookHelper.sharedInstance().currentProfile!)
+        }
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-    private func roundSquareImageView(imageView: UIImageView?) {
-        if let imageView = imageView {
-            imageView.layoutIfNeeded()
-            imageView.layer.cornerRadius = imageView.frame.height/2
-            imageView.backgroundColor = UIColor.white
-        }
-    }
 
     // MARK: Actions
     
     @IBAction func loginToFacebook(_ sender: UIBarButtonItem) {
         FacebookHelper.sharedInstance().logIn(from: self, successBlock: { (profile) in
-            self.showToast(message: "Logged in as \(profile.firstName!) \(profile.lastName!)")
+            self.showLoggedInMessage(profile: profile)
         }) { (error) in
                 if error != nil {
                     self.showToast(message: "Couldn't log in to Facebook account: \(error?.localizedDescription)")
@@ -49,7 +44,7 @@ class MainViewController: UIViewController {
     
     // MARK: Private
     
-    func showToast(message: String) {
+    private func showToast(message: String) {
         let toastLabel = UILabel(frame: CGRect(x: self.view.frame.size.width/2 - 150, y: self.view.frame.size.height-100, width: 300, height: 35))
         toastLabel.backgroundColor = UIColor.black
         toastLabel.textColor = UIColor.white
@@ -62,6 +57,18 @@ class MainViewController: UIViewController {
         UIView.animate(withDuration: 4.0, delay: 0.1, options: UIViewAnimationOptions.curveEaseOut, animations: {
             toastLabel.alpha = 0.0
         })
+    }
+    
+    private func showLoggedInMessage(profile: FacebookHelper.FacebookUserProfile) {
+        self.showToast(message: "Logged in as \(profile.firstName!) \(profile.lastName!)")
+    }
+    
+    private func roundSquareImageView(imageView: UIImageView?) {
+        if let imageView = imageView {
+            imageView.layoutIfNeeded()
+            imageView.layer.cornerRadius = imageView.frame.height/2
+            imageView.backgroundColor = UIColor.white
+        }
     }
 }
 
