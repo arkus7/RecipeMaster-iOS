@@ -148,7 +148,7 @@
                                 <color key="backgroundColor" red="0.84751625536636988" green="0.84751625536636988" blue="0.84751625536636988" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstItem="0Ik-oA-Xix" firstAttribute="centerY" secondItem="ItP-2U-YeF" secondAttribute="centerY" id="4dx-Rd-rBy"/>
-                                    <constraint firstItem="Icp-Iw-h2D" firstAttribute="leading" secondItem="0Ik-oA-Xix" secondAttribute="trailing" constant="32" id="6FV-Pb-cXs"/>
+                                    <constraint firstItem="Icp-Iw-h2D" firstAttribute="leading" secondItem="0Ik-oA-Xix" secondAttribute="trailing" constant="8" id="6FV-Pb-cXs"/>
                                     <constraint firstItem="Icp-Iw-h2D" firstAttribute="centerY" secondItem="ItP-2U-YeF" secondAttribute="centerY" id="7Qi-k9-1op"/>
                                     <constraint firstItem="0Ik-oA-Xix" firstAttribute="leading" secondItem="ItP-2U-YeF" secondAttribute="leading" constant="10" id="hnv-Ep-llc"/>
                                     <constraint firstAttribute="height" constant="75" id="uai-By-pBT"/>
