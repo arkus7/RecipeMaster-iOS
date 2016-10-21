@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -78,7 +79,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" hidesWhenStopped="YES" animating="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="3Lv-Kw-7RM">
-                                <frame key="frameInset" minX="177" minY="323" width="20" height="20"/>
+                                <frame key="frameInset" minX="74" minY="-29" width="20" height="20"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </activityIndicatorView>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gQY-P6-vKQ">
@@ -129,14 +130,41 @@
                                     <constraint firstAttribute="trailingMargin" secondItem="Ike-se-DWV" secondAttribute="trailing" id="hPT-bt-3AB"/>
                                 </constraints>
                             </scrollView>
+                            <view opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ItP-2U-YeF" userLabel="Logged in view">
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="0Ik-oA-Xix" userLabel="Profile Image">
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="0Ik-oA-Xix" secondAttribute="height" multiplier="1:1" id="A8w-FI-M2a"/>
+                                            <constraint firstAttribute="width" constant="50" id="B4Q-OL-DMx"/>
+                                            <constraint firstAttribute="height" constant="50" id="SSL-UU-vfI"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" clearsContextBeforeDrawing="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Logged in as" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Icp-Iw-h2D" userLabel="Logged in label">
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.84751625536636988" green="0.84751625536636988" blue="0.84751625536636988" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="0Ik-oA-Xix" firstAttribute="centerY" secondItem="ItP-2U-YeF" secondAttribute="centerY" id="4dx-Rd-rBy"/>
+                                    <constraint firstItem="Icp-Iw-h2D" firstAttribute="leading" secondItem="0Ik-oA-Xix" secondAttribute="trailing" constant="32" id="6FV-Pb-cXs"/>
+                                    <constraint firstItem="Icp-Iw-h2D" firstAttribute="centerY" secondItem="ItP-2U-YeF" secondAttribute="centerY" id="7Qi-k9-1op"/>
+                                    <constraint firstItem="0Ik-oA-Xix" firstAttribute="leading" secondItem="ItP-2U-YeF" secondAttribute="leading" constant="10" id="hnv-Ep-llc"/>
+                                    <constraint firstAttribute="height" constant="75" id="uai-By-pBT"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="gQY-P6-vKQ" firstAttribute="leading" secondItem="JLX-C0-lza" secondAttribute="leading" id="40N-xu-OCm"/>
+                            <constraint firstItem="ItP-2U-YeF" firstAttribute="top" secondItem="AGl-ri-9X5" secondAttribute="bottom" constant="-75" id="8RF-sy-cW5"/>
+                            <constraint firstItem="ItP-2U-YeF" firstAttribute="width" secondItem="JLX-C0-lza" secondAttribute="width" id="XQP-kk-hHo"/>
                             <constraint firstAttribute="bottom" secondItem="gQY-P6-vKQ" secondAttribute="bottom" id="cwH-Gf-gbG"/>
                             <constraint firstItem="gQY-P6-vKQ" firstAttribute="top" secondItem="JLX-C0-lza" secondAttribute="top" id="d7R-BL-Vf1"/>
                             <constraint firstItem="K2q-ZA-HAr" firstAttribute="width" secondItem="JLX-C0-lza" secondAttribute="width" id="eIy-Sp-61u"/>
                             <constraint firstAttribute="trailing" secondItem="gQY-P6-vKQ" secondAttribute="trailing" id="rjp-vT-6Od"/>
+                            <constraint firstItem="ItP-2U-YeF" firstAttribute="leading" secondItem="JLX-C0-lza" secondAttribute="leadingMargin" constant="-16" id="sfF-NN-6W9"/>
                         </constraints>
                     </view>
                     <connections>
@@ -144,8 +172,11 @@
                         <outlet property="descriptionLabel" destination="Zez-82-mbZ" id="luT-rk-U4c"/>
                         <outlet property="imagesStackView" destination="ViL-x8-kkw" id="Ly6-3q-tNp"/>
                         <outlet property="ingredientsStackView" destination="aCM-83-fjS" id="eCo-PB-0T7"/>
+                        <outlet property="loggedInView" destination="ItP-2U-YeF" id="WMB-I1-JyG"/>
                         <outlet property="mainStackView" destination="Ike-se-DWV" id="zt0-UE-qFE"/>
                         <outlet property="preparingStackView" destination="aFa-Oe-B8Y" id="uay-WJ-jB9"/>
+                        <outlet property="profileImageView" destination="0Ik-oA-Xix" id="dpO-VP-U5S"/>
+                        <outlet property="profileNameLabel" destination="Icp-Iw-h2D" id="x42-Ds-QV5"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0af-xe-JC8" userLabel="First Responder" sceneMemberID="firstResponder"/>

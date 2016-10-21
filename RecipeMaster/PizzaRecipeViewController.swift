@@ -20,11 +20,23 @@ class PizzaRecipeViewController: UIViewController {
     @IBOutlet weak var imagesStackView: UIStackView!
     @IBOutlet weak var mainStackView: UIStackView!
     @IBOutlet weak var activityIndicatorView: UIActivityIndicatorView!
+    @IBOutlet weak var profileImageView: UIImageView!
+    @IBOutlet weak var profileNameLabel: UILabel!
+    @IBOutlet weak var loggedInView: UIView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         getRecipe()
 
+        if FacebookHelper.sharedInstance().isLoggedIn() {
+            if let profile = FacebookHelper.sharedInstance().currentProfile {
+                Nuke.loadImage(with: URL(string: profile.profilePictureUrl!)!, into: profileImageView)
+                profileNameLabel.text = "Logged in as \(profile.firstName!) \(profile.lastName!)"
+            }
+        } else {
+            loggedInView.isHidden = true
+        }
+        
         // Do any additional setup after loading the view.
     }
 
@@ -33,13 +45,14 @@ class PizzaRecipeViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
+    /*
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
     }
+    */
     
     private func getRecipe() {
         ApiClient.getRecipe(completionHandler: { recipe in
