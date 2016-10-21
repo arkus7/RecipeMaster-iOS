@@ -18,6 +18,8 @@ class PizzaRecipeViewController: UIViewController {
     @IBOutlet weak var ingredientsStackView: UIStackView!
     @IBOutlet weak var preparingStackView: UIStackView!
     @IBOutlet weak var imagesStackView: UIStackView!
+    @IBOutlet weak var mainStackView: UIStackView!
+    @IBOutlet weak var activityIndicatorView: UIActivityIndicatorView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,17 +41,19 @@ class PizzaRecipeViewController: UIViewController {
         
     }
     
-    func getRecipe() {
+    private func getRecipe() {
         ApiClient.getRecipe(completionHandler: { recipe in
             self.descriptionLabel.text = recipe.description
             self.addStringListToStackView(to: self.ingredientsStackView, fromList: recipe.ingredients)
             self.addStringListToStackView(to: self.preparingStackView, fromList: recipe.preparations)
             self.addImagesListToStackView(to: self.imagesStackView, fromList: recipe.images)
+            self.activityIndicatorView.stopAnimating()
+            self.mainStackView.isHidden = false
             
         })
     }
     
-    func addStringListToStackView(to: UIStackView, fromList: [String]) {
+    private func addStringListToStackView(to: UIStackView, fromList: [String]) {
         for i in 0..<fromList.count {
             let label = UILabel(frame: CGRect(x: 0, y: 0, width: 100, height: 100))
             label.text = fromList[i]
@@ -58,7 +62,7 @@ class PizzaRecipeViewController: UIViewController {
         }
     }
     
-    func addImagesListToStackView(to: UIStackView, fromList: [String]) {
+    private func addImagesListToStackView(to: UIStackView, fromList: [String]) {
         for i in 0..<fromList.count {
             let image = UIImageView()
             Nuke.loadImage(with: URL(string: fromList[i])!, into: image)

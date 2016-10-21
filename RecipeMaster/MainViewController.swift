@@ -26,7 +26,7 @@ class MainViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    func roundSquareImageView(imageView: UIImageView?) {
+    private func roundSquareImageView(imageView: UIImageView?) {
         if let imageView = imageView {
             imageView.layoutIfNeeded()
             imageView.layer.cornerRadius = imageView.frame.height/2

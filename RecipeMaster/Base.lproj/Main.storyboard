@@ -73,9 +73,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" hidesWhenStopped="YES" animating="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="3Lv-Kw-7RM">
+                                <frame key="frameInset" minX="177" minY="323" width="20" height="20"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </activityIndicatorView>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gQY-P6-vKQ">
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="Ike-se-DWV">
+                                    <stackView hidden="YES" opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="Ike-se-DWV">
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pizza:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K2q-ZA-HAr" userLabel="Pizza Label">
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
@@ -110,7 +114,7 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="ViL-x8-kkw" userLabel="Images List"/>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="ViL-x8-kkw" userLabel="Images List"/>
                                         </subviews>
                                     </stackView>
                                 </subviews>
@@ -132,9 +136,11 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="activityIndicatorView" destination="3Lv-Kw-7RM" id="UbT-g6-DRS"/>
                         <outlet property="descriptionLabel" destination="Zez-82-mbZ" id="luT-rk-U4c"/>
                         <outlet property="imagesStackView" destination="ViL-x8-kkw" id="Ly6-3q-tNp"/>
                         <outlet property="ingredientsStackView" destination="aCM-83-fjS" id="eCo-PB-0T7"/>
+                        <outlet property="mainStackView" destination="Ike-se-DWV" id="zt0-UE-qFE"/>
                         <outlet property="preparingStackView" destination="aFa-Oe-B8Y" id="uay-WJ-jB9"/>
                     </connections>
                 </viewController>
