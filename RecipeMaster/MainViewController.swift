@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import FBSDKLoginKit
 
 class MainViewController: UIViewController {
     
@@ -34,5 +35,16 @@ class MainViewController: UIViewController {
         }
     }
 
+    // MARK: Actions
+    
+    @IBAction func loginToFacebook(_ sender: UIBarButtonItem) {
+        FacebookHelper.sharedInstance().logIn(from: self, successBlock: { (profile) in
+            print(profile.toJSONString())
+        }) { (error) in
+                if error != nil {
+                    print(error)
+                }
+        }
+    }
 }
 

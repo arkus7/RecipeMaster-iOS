@@ -46,7 +46,11 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="1O0-uJ-zIz">
-                        <barButtonItem key="leftBarButtonItem" title="Login with Facebook" id="Q5f-az-Mgi"/>
+                        <barButtonItem key="leftBarButtonItem" title="Login with Facebook" id="Q5f-az-Mgi">
+                            <connections>
+                                <action selector="loginToFacebook:" destination="BYZ-38-t0r" id="N1R-Fl-Nun"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Get recipe" id="hfc-b2-cDR">
                             <connections>
                                 <segue destination="egr-5K-86y" kind="show" id="u6B-Lu-qWv"/>
