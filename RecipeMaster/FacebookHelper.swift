@@ -14,6 +14,7 @@ class FacebookHelper {
     // MARK: Properties
     
     private static var instance: FacebookHelper?
+    private static let profileDefaultsKey = "facebook_user_profile"
     
     private let facebookReadPermissions = ["public_profile", "email", "user_friends"]
     private let profileInfoRequestPath = "me?fields=first_name,last_name,picture"
@@ -22,7 +23,7 @@ class FacebookHelper {
         return FBSDKLoginManager()
     }()
     
-    var currentProfile : FacebookUserProfile
+    var currentProfile : FacebookUserProfile?
     
     // MARK: Initializers
     
@@ -31,10 +32,6 @@ class FacebookHelper {
             instance = FacebookHelper()
         }
         return instance
-    }
-    
-    init() {
-        currentProfile = FacebookUserProfile()
     }
     
     // MARK: Public Facebook Methods
@@ -72,10 +69,12 @@ class FacebookHelper {
     
     func logOut() {
         loginManager.logOut()
+        saveProfileToDefaults(profile: nil)
     }
     
     func isLoggedIn() -> Bool {
-        return FBSDKAccessToken.current() != nil
+        getProfileFromDefaults()
+        return FBSDKAccessToken.current() != nil && currentProfile != nil
     }
     
     func loadProfileInfo(callback: @escaping (FacebookUserProfile) -> ()) {
@@ -84,7 +83,8 @@ class FacebookHelper {
                 // TODO: handle error
             } else {
                 self.currentProfile = FacebookUserProfile(JSON: result as! [String:Any])!
-                callback(self.currentProfile)
+                self.saveProfileToDefaults(profile: self.currentProfile!)
+                callback(self.currentProfile!)
             }
         }
     }
@@ -100,6 +100,19 @@ class FacebookHelper {
             }
         }
         return true
+    }
+    
+    private func getProfileFromDefaults() {
+        let preferences = UserDefaults.standard
+        if let profileString = preferences.string(forKey: FacebookHelper.profileDefaultsKey) {
+            currentProfile = FacebookUserProfile(JSONString: profileString)
+        }
+    }
+    
+    private func saveProfileToDefaults(profile: FacebookUserProfile?) {
+        let preferences = UserDefaults.standard
+        preferences.set(profile != nil ? profile!.toJSONString() : nil, forKey: FacebookHelper.profileDefaultsKey)
+        preferences.synchronize()
     }
     
     // MARK: Structures
