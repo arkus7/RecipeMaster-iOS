@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		21151D701DBA1D2C0020914B /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21151D6E1DBA1D2C0020914B /* FBSDKCoreKit.framework */; };
+		21151D711DBA1D2C0020914B /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21151D6F1DBA1D2C0020914B /* Bolts.framework */; };
+		21151D741DBA1D4A0020914B /* FBSDKShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21151D721DBA1D4A0020914B /* FBSDKShareKit.framework */; };
+		21151D751DBA1D4A0020914B /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21151D731DBA1D4A0020914B /* FBSDKLoginKit.framework */; };
+		21151D771DBA2BBD0020914B /* FacebookHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21151D761DBA2BBD0020914B /* FacebookHelper.swift */; };
 		211CD65C1DB774C0000CAE38 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 211CD65B1DB774C0000CAE38 /* AppDelegate.swift */; };
 		211CD65E1DB774C0000CAE38 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 211CD65D1DB774C0000CAE38 /* MainViewController.swift */; };
 		211CD6611DB774C0000CAE38 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 211CD65F1DB774C0000CAE38 /* Main.storyboard */; };
@@ -31,6 +36,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		21151D6E1DBA1D2C0020914B /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKCoreKit.framework; sourceTree = "<group>"; };
+		21151D6F1DBA1D2C0020914B /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
+		21151D721DBA1D4A0020914B /* FBSDKShareKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKShareKit.framework; sourceTree = "<group>"; };
+		21151D731DBA1D4A0020914B /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKLoginKit.framework; sourceTree = "<group>"; };
+		21151D761DBA2BBD0020914B /* FacebookHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FacebookHelper.swift; sourceTree = "<group>"; };
+		21151D781DBA3E5F0020914B /* RecipeMaster.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = RecipeMaster.entitlements; sourceTree = "<group>"; };
 		211CD6581DB774C0000CAE38 /* RecipeMaster.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RecipeMaster.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		211CD65B1DB774C0000CAE38 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		211CD65D1DB774C0000CAE38 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -57,7 +68,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				21151D741DBA1D4A0020914B /* FBSDKShareKit.framework in Frameworks */,
+				21151D711DBA1D2C0020914B /* Bolts.framework in Frameworks */,
+				21151D751DBA1D4A0020914B /* FBSDKLoginKit.framework in Frameworks */,
 				59F8F550027D4AC4BD4BE195 /* Pods_RecipeMaster.framework in Frameworks */,
+				21151D701DBA1D2C0020914B /* FBSDKCoreKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -95,6 +110,7 @@
 		211CD65A1DB774C0000CAE38 /* RecipeMaster */ = {
 			isa = PBXGroup;
 			children = (
+				21151D781DBA3E5F0020914B /* RecipeMaster.entitlements */,
 				219604681DBA102B003CDBA3 /* Backend */,
 				2140110E1DB77983001DD813 /* Supporting Files */,
 				2140110D1DB77978001DD813 /* Resources */,
@@ -161,6 +177,7 @@
 			isa = PBXGroup;
 			children = (
 				211CD6671DB774C0000CAE38 /* Info.plist */,
+				21151D761DBA2BBD0020914B /* FacebookHelper.swift */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -176,6 +193,10 @@
 		8CBE8E867A59F152373FFCC0 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				21151D721DBA1D4A0020914B /* FBSDKShareKit.framework */,
+				21151D731DBA1D4A0020914B /* FBSDKLoginKit.framework */,
+				21151D6E1DBA1D2C0020914B /* FBSDKCoreKit.framework */,
+				21151D6F1DBA1D2C0020914B /* Bolts.framework */,
 				B2E5B17909C11D204DE1CD22 /* Pods_RecipeMaster.framework */,
 				468D10519A26C2E00617AD0F /* Pods_RecipeMasterTests.framework */,
 			);
@@ -249,7 +270,13 @@
 				TargetAttributes = {
 					211CD6571DB774C0000CAE38 = {
 						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = 4UE95LJ5MB;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Keychain = {
+								enabled = 1;
+							};
+						};
 					};
 					211CD66B1DB774C1000CAE38 = {
 						CreatedOnToolsVersion = 8.0;
@@ -398,6 +425,7 @@
 				211CD65E1DB774C0000CAE38 /* MainViewController.swift in Sources */,
 				211CD65C1DB774C0000CAE38 /* AppDelegate.swift in Sources */,
 				21A50EDA1DB7A83B0034E826 /* PizzaRecipeViewController.swift in Sources */,
+				21151D771DBA2BBD0020914B /* FacebookHelper.swift in Sources */,
 				2196046A1DBA1042003CDBA3 /* ApiClient.swift in Sources */,
 				2196046C1DBA11A7003CDBA3 /* Recipe.swift in Sources */,
 			);
@@ -539,6 +567,12 @@
 			baseConfigurationReference = 4EFB72501B9EE0D7DCDA1665 /* Pods-RecipeMaster.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = RecipeMaster/RecipeMaster.entitlements;
+				DEVELOPMENT_TEAM = 4UE95LJ5MB;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = RecipeMaster/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.example.arkus.RecipeMaster;
@@ -552,6 +586,12 @@
 			baseConfigurationReference = F7D8712DDB03B42E2B3083B9 /* Pods-RecipeMaster.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = RecipeMaster/RecipeMaster.entitlements;
+				DEVELOPMENT_TEAM = 4UE95LJ5MB;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = RecipeMaster/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.example.arkus.RecipeMaster;
